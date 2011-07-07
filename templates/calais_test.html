@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Calais Test</h1>
+{% if text %}
+    <p>{{ text}}</p>
+{% endif %}
+{% if calais_data %}
+    <hr/>
+    <p>Language: {{ language }}</p>
+    <ul>
+        {% for key,value in calais_data.items %}
+            <li><p>{{ key }}:</p>{{ data }}</li>
+        {% endfor%}
+    </ul>
+{% endif %}
+{% endblock %}

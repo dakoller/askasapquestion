@@ -2,4 +2,13 @@
 
 {% block content %}
 <p>Welcome {{ user_name }}</p>
+{{ servicecount }}
+{% if oauthservices %}
+<hr/>
+<ul>
+{% for service in oauthservices %}
+    <li><p>{{ service.name }}</p></li>
+{% endfor %}
+</ul>
+{% endif %}
 {% endblock %}

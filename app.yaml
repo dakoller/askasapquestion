@@ -5,6 +5,7 @@ api_version: 1
 
 builtins:
 - remote_api: on
+- datastore_admin: on
 
 inbound_services:
 - warmup
@@ -22,10 +23,10 @@ handlers:
   expiration: '0'
   
 - url: /static/css/.*
-  static_dir: static/css
+  static_dir: static/css/
   
 - url: /static/js/.*
-  static_dir: static/js
+  static_dir: static/js/
 
 - url: /.*
   script: djangoappengine/main/main.py
